@@ -10,7 +10,6 @@ body {
   font-weight: 500;
 }
 
-
 .clickable {
   cursor: pointer;
 }
@@ -19,7 +18,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .load-wrapper {
@@ -34,7 +32,6 @@ body {
     width: 100px;
     animation: rotating infinite 1s;
   }
-
 }
 
 img.loading {
@@ -61,7 +58,6 @@ img.loading {
   animation: bopping infinite .5s;
 }
 
-
 .fixed {
   background-color: rgb(184, 161, 161);
 }
@@ -69,7 +65,7 @@ img.loading {
 .columns.is-multiline {
   margin-top: 0px;
   overflow-y: scroll;
-  height: 90vh;
+  height: 80vh;
 }
 
 // * STAT BARS
@@ -175,7 +171,6 @@ form {
   background-image: linear-gradient(to top right, #f3e7f1 20%, transparent, transparent, transparent);
 }
 
-
 .img-wrapper {
   display: flex;
   justify-content: center;
@@ -196,12 +191,19 @@ form {
 
 .shiny.display {
   animation: fadein forwards 1s;
-  margin: 20px 20px 0px -80px; 
+  margin: 20px 20px 0px -80px;
 }
 
 .shiny > img {
   position: relative;
   animation: waving infinite 1s;
+}
+
+.shiny.display.invisible {
+  visibility: hidden;
+  img {
+    visibility: hidden;
+  }
 }
 
 @keyframes waving {
@@ -233,7 +235,6 @@ form {
     animation: rotating forwards .5s;
     cursor: pointer;
   }
-
 }
 
 .pokeball-select.display {
@@ -256,7 +257,6 @@ form {
     animation: rotating forwards .5s;
     cursor: pointer;
   }
-
 }
 
 .pokedex-img {
@@ -285,7 +285,6 @@ form {
     filter: contrast(190%) brightness(75%);
     z-index: -1;
   }
-  
 }
 
 
@@ -297,11 +296,6 @@ form {
   100% { transform: scale(1); margin-left: 0; }
 }
 
-// @keyframes slidein {
-//   0% { margin-left: -100%;}
-//   100% { margin-left: 0; }
-// }
-
 .name {
   text-transform: capitalize;
 }
@@ -310,11 +304,11 @@ form {
   display: flex;
   justify-content: space-evenly;
   height: 90px;
+
   div {
     display: flex;
     flex-direction: column;
   }
-
 }
 
 .selected{
@@ -439,10 +433,7 @@ form {
   background-color: #5190d7;
 }
 
-
-
-
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
 
   .pokedex-entry {
     margin-top: 10px;
@@ -490,7 +481,7 @@ form {
 } 
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
 
   .background-div-one,.background-div-one-behind,.background-div-two {
     transform: rotate(25deg);
@@ -499,7 +490,6 @@ form {
     z-index: -1;
     position: absolute;
   }
-  
 
   .background-div-one {
     left: -40vh;
@@ -522,7 +512,5 @@ form {
     div {
       width: 58%;
     }
-    
   }
-
 }  

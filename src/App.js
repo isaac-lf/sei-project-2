@@ -171,7 +171,6 @@ function App() {
                 
                   <div className="pokemon-header-wrapper">
                     <p className="selected-pokemon name">{formatName(currentPokemon.name)}</p>    
-
                     <p className={`type ${currentPokemon.types[0].type.name}`}>
                       {currentPokemon.types[0].type.name}
                     </p>
@@ -183,9 +182,11 @@ function App() {
                   </div>
                   
                   <div className="img-wrapper">
-                    <div className={'shiny ' + pokedexImageDisplay}>
+                    <div className={'shiny ' + pokedexImageDisplay +
+                      (caughtPokemons.includes(currentPokemon.id) ? '' : ' invisible')}>
                       <img
-                        src={currentPokemon.sprites.versions['generation-iii']['emerald'].front_shiny}/>
+                        src={currentPokemon.sprites.versions['generation-iii']['emerald'].front_shiny}
+                      />
                     </div>
                     <img className={'pokedex-img' + pokedexImageDisplay} src={currentPokemon.sprites.other['official-artwork'].front_default}/>
                     <div className={`pokeball-select
