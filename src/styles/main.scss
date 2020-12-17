@@ -224,16 +224,14 @@ form {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-
   
   img {
-    opacity: 40%;
-  }
-
-  img:hover {
-    opacity: 100%;
-    animation: rotating forwards .5s;
-    cursor: pointer;
+    opacity: .4;
+    &:hover {
+      opacity: 1;
+      animation: rotating forwards .5s;
+      cursor: pointer;
+    }
   }
 }
 
@@ -242,14 +240,14 @@ form {
 }
 
 @keyframes fadein {
-  0% { opacity:0; }
-  50% { opacity:0; }
-  100% { opacity:1; }
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .pokeball-select.activated {
   img {
-    opacity: 100%;
+    opacity: 1;
     filter: hue-rotate(140deg) brightness(110%);
   }
 
@@ -307,6 +305,7 @@ form {
 
   div {
     display: flex;
+    align-items: center;
     flex-direction: column;
   }
 }
